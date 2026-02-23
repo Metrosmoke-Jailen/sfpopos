@@ -7,6 +7,30 @@
   padding: 2em;
 }
 
+.POPOSList form {
+  display: flex;
+  align-items: flex-start;
+}
+
+.POPOSList form input,
+.POPOSList form button {
+  padding: 1em;
+  margin: 0;
+  border: 1px solid;
+  font-size: 1rem;
+}
+
+.POPOSList form input {
+  flex: 1;
+  border-top-left-radius: 0.5em;
+  border-bottom-left-radius: 0.5em;
+}
+
+.POPOSList form button {
+  border-top-right-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+}
+
 /* Smaller screens and tablets */
 @media only screen and (max-width: 960px) {
   .POPOSList {
