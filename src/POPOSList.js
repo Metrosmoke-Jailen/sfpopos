@@ -1,19 +1,30 @@
 import POPOSSpace from './POPOSSpace'
 import './POPOSList.css'
+import data from './sfpopos-data.json'
 
 function POPOSList() {
+  const spaces = data.map(({ title, address, images, hours }) => {
   return (
     <div className="POPOSList">
       <POPOSSpace
-        name="50 California Street"
-        address="50 California St."
-        image="50-california-st.jpg"
+        key={title}
+        name={title}
+        address={address}
+        image={images[0]}
+        hours={hours}
       />
       <POPOSSpace />
       <POPOSSpace />
       <POPOSSpace />
       <POPOSSpace />
       <POPOSSpace />
+    </div>
+  )
+})
+
+return (
+    <div className="POPOSList">
+      {spaces}
     </div>
   )
 }

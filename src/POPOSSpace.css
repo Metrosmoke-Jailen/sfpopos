@@ -7,3 +7,10 @@
   width: 100%;
   height: auto;
 }
+
+.POPOSSpace-hours {
+  margin-top: 8px;
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #555;
+}
