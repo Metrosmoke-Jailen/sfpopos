@@ -1,10 +1,10 @@
 import React from 'react'
 import { createRoot } from 'react-dom/client'
 import { HashRouter as Router, Routes, Route } from 'react-router-dom'
-import App from './App'
-import POPOSList from './POPOSList'
-import POPOSDetails from './POPOSDetails'
-import About from './About'
+import App from './components/App'
+import POPOSList from './components/POPOSList/POPOSList'
+import POPOSDetails from './components/POPOSDetails/POPOSDetails'
+import About from './components//About/About'
 import './index.css'
 import reportWebVitals from './reportWebVitals';
 

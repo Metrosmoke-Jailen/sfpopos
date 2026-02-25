@@ -1,6 +1,6 @@
-import POPOSSpace from './POPOSSpace'
+import POPOSSpace from '../POPOSSpace/POPOSSpace'
 import './POPOSList.css'
-import data from './sfpopos-data.json'
+import data from '../../sfpopos-data.json'
 import { useState } from 'react'
 
 function POPOSList() {
