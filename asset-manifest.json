@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Metrosmoke-Jailen/sfpopos/static/css/main.4bfcee3f.css",
+    "main.js": "/Metrosmoke-Jailen/sfpopos/static/js/main.23eb87ad.js",
+    "static/js/453.01f3a2ff.chunk.js": "/Metrosmoke-Jailen/sfpopos/static/js/453.01f3a2ff.chunk.js",
+    "index.html": "/Metrosmoke-Jailen/sfpopos/index.html",
+    "main.4bfcee3f.css.map": "/Metrosmoke-Jailen/sfpopos/static/css/main.4bfcee3f.css.map",
+    "main.23eb87ad.js.map": "/Metrosmoke-Jailen/sfpopos/static/js/main.23eb87ad.js.map",
+    "453.01f3a2ff.chunk.js.map": "/Metrosmoke-Jailen/sfpopos/static/js/453.01f3a2ff.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4bfcee3f.css",
+    "static/js/main.23eb87ad.js"
+  ]
+}
