@@ -1,4 +1,4 @@
-import './POPOSFeature.css'
+import styles from './POPOSFeature.module.css'
 
 function getFeature(str) {
   switch (str) {
@@ -20,7 +20,7 @@ function getFeature(str) {
 function POPOSFeature(props) {
   const emoji = getFeature(props.name)
   return (
-    <div className="POPOSFeature" title={props.name}>
+    <div className={styles.POPOSFeature} title={props.name}>
       {emoji}
     </div>
   )

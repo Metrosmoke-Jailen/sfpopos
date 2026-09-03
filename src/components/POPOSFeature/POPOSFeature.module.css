@@ -1,0 +1,41 @@
+.POPOSFeature {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 3rem;
+  height: 3rem;
+
+  background: var(--fog);
+
+  border: 1px solid var(--warm-gray);
+  border-radius: var(--radius-small);
+
+  font-size: 1.4rem;
+
+  cursor: default;
+
+  transition:
+    background var(--transition),
+    border-color var(--transition),
+    transform var(--transition);
+}
+
+.POPOSFeature:hover {
+  background: #f7eee9;
+
+  border-color: var(--bridge-orange);
+
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  .POPOSFeature {
+    width: 2.75rem;
+    height: 2.75rem;
+
+    border-radius: 8px;
+
+    font-size: 1.25rem;
+  }
+}

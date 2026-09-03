@@ -15,8 +15,8 @@ root.render(
     <Routes>
       <Route path="/" element={<App />}>
         <Route index element={<POPOSList />} />
-        <Route path="about" element={<About />} />
-        <Route path="details/:id" element={<POPOSDetails />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/details/:id" element={<POPOSDetails />} />
       </Route>
     </Routes>
   </Router>

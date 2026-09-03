@@ -1,5 +1,5 @@
 import POPOSSpace from '../POPOSSpace/POPOSSpace'
-import './POPOSList.css'
+import styles from './POPOSList.module.css'
 import data from '../../sfpopos-data.json'
 import { useState } from 'react'
 
@@ -29,7 +29,7 @@ function POPOSList() {
     
 
 return (
-    <div className="POPOSList">
+    <div className={styles.POPOSList}>
       <form onSubmit={(e) => e.preventDefault()}>
         <input
           value={query}

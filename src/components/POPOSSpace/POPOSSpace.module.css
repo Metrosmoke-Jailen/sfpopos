@@ -1,0 +1,171 @@
+.POPOSSpace {
+  margin-bottom: 2rem;
+  padding: 1.25rem;
+
+  background: var(--white);
+
+  border: 1px solid var(--warm-gray);
+  border-top: 4px solid var(--bridge-orange);
+
+  border-radius: var(--radius-medium);
+
+  box-shadow: 0 6px 20px var(--shadow);
+
+  overflow: hidden;
+
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition);
+}
+
+.POPOSSpace:hover {
+  transform: translateY(-4px);
+
+  box-shadow: 0 12px 30px var(--shadow-heavy);
+}
+
+.POPOSSpace img {
+  display: block;
+
+  width: 100%;
+  max-height: 350px;
+
+  object-fit: cover;
+
+  border-radius: var(--radius-small);
+
+  transition: transform 0.3s ease;
+}
+
+.POPOSSpace:hover img {
+  transform: scale(1.015);
+}
+
+.POPOSSpace h1 {
+  margin: 1.25rem 0 0.75rem;
+
+  font-size: 1.5rem;
+}
+
+.POPOSSpace h1 a {
+  color: var(--charcoal);
+
+  text-decoration: none;
+
+  transition: color var(--transition);
+}
+
+.POPOSSpace h1 a:hover {
+  color: var(--bridge-orange);
+}
+
+.POPOSSpace p {
+  margin: 0.5rem 0;
+
+  color: var(--fog-dark);
+
+  line-height: 1.6;
+}
+
+.POPOSSpace strong {
+  color: var(--charcoal);
+}
+
+.toggleButton {
+  margin: 0.75rem 0;
+
+  padding: 0.6rem 0.9rem;
+
+  border: 1px solid var(--bridge-orange);
+  border-radius: var(--radius-small);
+
+  background: transparent;
+  color: var(--bridge-orange);
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background var(--transition),
+    color var(--transition);
+}
+
+.toggleButton:hover {
+  background: var(--bridge-orange);
+  color: var(--white);
+}
+
+.details {
+  display: grid;
+  grid-template-rows: 0fr;
+
+  opacity: 0;
+
+  transition:
+    grid-template-rows 0.3s ease,
+    opacity 0.2s ease;
+}
+
+.details > * {
+  overflow: hidden;
+}
+
+.detailsOpen {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+
+@media (max-width: 600px) {
+  .POPOSSpace {
+    margin-bottom: 1.25rem;
+    padding: 0.85rem;
+
+    border-top-width: 3px;
+    border-radius: 12px;
+
+    box-shadow: 0 4px 14px var(--shadow);
+  }
+
+  .POPOSSpace img {
+    width: 100%;
+    height: 220px;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+  }
+
+  .POPOSSpace h1 {
+    margin: 1rem 0 0.5rem;
+
+    font-size: 1.2rem;
+    line-height: 1.25;
+  }
+
+  .POPOSSpace p {
+    margin: 0.4rem 0;
+
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .toggleButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-height: 44px;
+
+    margin: 0.85rem 0 0;
+
+    padding: 0.65rem;
+
+    font-size: 0.9rem;
+  }
+
+  .details {
+    margin-top: 0.25rem;
+  }
+}

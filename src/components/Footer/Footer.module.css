@@ -1,0 +1,64 @@
+.Footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  gap: 1.5rem;
+
+  width: 100%;
+
+  padding: 2rem;
+
+  background: var(--charcoal);
+
+  border-top: 4px solid var(--bridge-orange);
+
+  color: var(--white);
+
+  font-size: 0.9rem;
+}
+
+.Footer a {
+  color: var(--bridge-orange-light);
+
+  text-decoration: none;
+
+  font-weight: 600;
+
+  transition: color var(--transition);
+}
+
+.Footer a:hover {
+  color: var(--white);
+}
+
+@media (max-width: 600px) {
+  .Footer {
+    display: flex;
+    flex-direction: column;
+
+    gap: 0.5rem;
+
+    padding: 1.5rem 1rem;
+
+    text-align: center;
+  }
+
+  .Footer span {
+    margin-bottom: 0.5rem;
+
+    font-size: 0.8rem;
+  }
+
+  .Footer a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 44px;
+    min-width: 100px;
+
+    font-size: 0.9rem;
+  }
+}

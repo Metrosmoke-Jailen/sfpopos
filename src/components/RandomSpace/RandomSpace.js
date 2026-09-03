@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import data from '../../sfpopos-data.js'
-import './RandomSpace.css'
+import styles from './RandomSpace.module.css'
 
 function RandomSpace() {
   const navigate = useNavigate()
@@ -12,7 +12,7 @@ function RandomSpace() {
 
   return (
     <button
-      className="RandomSpace"
+      className={styles.RandomSpace}
       onClick={handleClick}
     >
       Show me a random space

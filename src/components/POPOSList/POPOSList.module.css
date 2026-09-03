@@ -1,0 +1,107 @@
+.POPOSList {
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+  padding: 3rem 2rem 5rem;
+}
+
+.POPOSList form {
+  display: flex;
+  gap: 0.75rem;
+
+  margin-bottom: 2.5rem;
+}
+
+.POPOSList input {
+  flex: 1;
+
+  min-width: 0;
+  padding: 0.9rem 1rem;
+
+  border: 2px solid var(--warm-gray);
+  border-radius: var(--radius-small);
+
+  background: var(--white);
+  color: var(--charcoal);
+
+  font-size: 1rem;
+
+  transition:
+    border-color var(--transition),
+    box-shadow var(--transition);
+}
+
+.POPOSList input::placeholder {
+  color: var(--fog-dark);
+}
+
+.POPOSList input:focus {
+  outline: none;
+
+  border-color: var(--bridge-orange);
+
+  box-shadow: 0 0 0 3px rgba(192, 54, 44, 0.15);
+}
+
+.POPOSList button {
+  padding: 0.9rem 1.4rem;
+
+  border: none;
+  border-radius: var(--radius-small);
+
+  background: var(--bridge-orange);
+  color: var(--white);
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background var(--transition),
+    transform var(--transition);
+}
+
+.POPOSList button:hover {
+  background: var(--bridge-orange-dark);
+  transform: translateY(-1px);
+}
+
+.POPOSList button:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  .POPOSList {
+    width: 100%;
+
+    padding: 1.25rem 1rem 3rem;
+  }
+
+  .POPOSList form {
+    display: flex;
+    flex-direction: column;
+
+    gap: 0.65rem;
+
+    margin-bottom: 1.5rem;
+  }
+
+  .POPOSList input {
+    width: 100%;
+    min-height: 48px;
+
+    padding: 0.8rem 0.9rem;
+
+    font-size: 1rem;
+  }
+
+  .POPOSList button {
+    width: 100%;
+    min-height: 48px;
+
+    padding: 0.8rem 1rem;
+
+    font-size: 0.95rem;
+  }
+}

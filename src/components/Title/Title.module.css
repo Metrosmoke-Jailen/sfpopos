@@ -1,0 +1,154 @@
+.Title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+
+  width: 100%;
+  padding: 1.25rem 2rem;
+
+  background: var(--charcoal);
+  border-bottom: 4px solid var(--bridge-orange);
+
+  color: var(--white);
+}
+
+.brand {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+}
+
+.eyebrow {
+  color: var(--bridge-orange-light);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+}
+
+.brand h1 {
+  margin: 0;
+
+  color: var(--white);
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.navLink,
+.navLinkActive {
+  position: relative;
+
+  padding: 0.5rem 0;
+
+  color: var(--white);
+  text-decoration: none;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  transition: color var(--transition);
+}
+
+.navLink:hover {
+  color: var(--bridge-orange-light);
+}
+
+.navLinkActive {
+  color: var(--bridge-orange-light);
+}
+
+.navLinkActive::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.25rem;
+
+  height: 3px;
+
+  background: var(--bridge-orange);
+
+  border-radius: 999px;
+}
+
+.randomSpace {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 700px) {
+  .Title {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    gap: 1rem;
+
+    padding: 1rem;
+
+    border-bottom-width: 3px;
+  }
+
+  .brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 0.15rem;
+  }
+
+  .eyebrow {
+    font-size: 0.65rem;
+    letter-spacing: 0.18em;
+  }
+
+  .brand h1 {
+    font-size: 2rem;
+    line-height: 1;
+  }
+
+  .nav {
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+
+    gap: 2rem;
+  }
+
+  .navLink,
+  .navLinkActive {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 70px;
+    min-height: 44px;
+
+    padding: 0.5rem;
+
+    font-size: 0.95rem;
+  }
+
+  .navLinkActive::after {
+    bottom: 0;
+
+    height: 2px;
+  }
+
+  .randomSpace {
+    width: 100%;
+  }
+
+  .randomSpace button {
+    width: 100%;
+    min-height: 46px;
+  }
+}
