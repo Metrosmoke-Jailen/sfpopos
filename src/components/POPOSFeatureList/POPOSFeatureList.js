@@ -2,14 +2,14 @@ import POPOSFeature from '../POPOSFeature/POPOSFeature.js'
 import styles from './POPOSFeatureList.module.css'
 
 function POPOSFeatureList(props) {
-  const icons = props.features.map((feature) => {
-    return <POPOSFeature key={feature} name={feature} />
-  })
-
   return (
-    <div className={styles.POPOSFeatureList}>
-      {icons}
-    </div>
+    <ul className={styles.POPOSFeatureList}>
+      {props.features.map((feature) => (
+        <li key={feature}>
+          <POPOSFeature name={feature} />
+        </li>
+      ))}
+    </ul>
   )
 }
 

@@ -5,13 +5,21 @@ function Footer() {
   const year = new Date().getFullYear()
 
   return (
-    <div className={styles.Footer}>
+    <footer className={styles.Footer}>
       <span>Jailen Truitt © {year}</span>
 
-      <NavLink to="/about">About</NavLink>
-      <NavLink to="/contact">Contact</NavLink>
-      <NavLink to="/map">Map</NavLink>
-    </div>
+      <NavLink to="/about">
+        About
+      </NavLink>
+
+      <NavLink to="/contact">
+        Contact
+      </NavLink>
+
+      <NavLink to="/map">
+        Map
+      </NavLink>
+    </footer>
   )
 }
 

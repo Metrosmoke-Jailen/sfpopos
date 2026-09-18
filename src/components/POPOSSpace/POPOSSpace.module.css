@@ -41,13 +41,13 @@
   transform: scale(1.015);
 }
 
-.POPOSSpace h1 {
+.POPOSSpace h2 {
   margin: 1.25rem 0 0.75rem;
 
   font-size: 1.5rem;
 }
 
-.POPOSSpace h1 a {
+.POPOSSpace h2 a {
   color: var(--charcoal);
 
   text-decoration: none;
@@ -55,7 +55,7 @@
   transition: color var(--transition);
 }
 
-.POPOSSpace h1 a:hover {
+.POPOSSpace h2 a:hover {
   color: var(--bridge-orange);
 }
 
@@ -69,6 +69,22 @@
 
 .POPOSSpace strong {
   color: var(--charcoal);
+}
+
+.POPOSSpace figure {
+  margin: 0;
+}
+
+.POPOSSpace figcaption {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .toggleButton {
@@ -136,7 +152,7 @@
     border-radius: 8px;
   }
 
-  .POPOSSpace h1 {
+  .POPOSSpace h2 {
     margin: 1rem 0 0.5rem;
 
     font-size: 1.2rem;

@@ -12,23 +12,27 @@ function POPOSSpace(props) {
   }
 
   return (
-    <div className={styles.POPOSSpace}>
+    <article className={styles.POPOSSpace}>
+      <figure>
+        <Link to={`/details/${id}`}>
+          <img
+            src={`${process.env.PUBLIC_URL}/images/${image}`}
+            alt={`${name}, a privately owned public open space in San Francisco`}
+          />
+        </Link>
 
-      <Link to={`/details/${id}`}>
-        <img
-          src={`${process.env.PUBLIC_URL}/images/${image}`}
-          alt={name}
-        />
-      </Link>
+        <figcaption>{name}</figcaption>
+      </figure>
 
-      <h1>
+      <h2>
         <Link to={`/details/${id}`}>
           {name}
         </Link>
-      </h1>
+      </h2>
 
       <button
         className={styles.toggleButton}
+        type="button"
         onClick={toggleDetails}
         aria-expanded={isOpen}
         aria-controls={`details-${id}`}
@@ -48,8 +52,7 @@ function POPOSSpace(props) {
           <strong>Hours:</strong> {hours}
         </p>
       </div>
-
-    </div>
+    </article>
   )
 }
 

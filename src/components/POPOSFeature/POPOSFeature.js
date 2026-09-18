@@ -19,10 +19,16 @@ function getFeature(str) {
 
 function POPOSFeature(props) {
   const emoji = getFeature(props.name)
+
   return (
-    <div className={styles.POPOSFeature} title={props.name}>
+    <span
+      className={styles.POPOSFeature}
+      title={props.name}
+      role="img"
+      aria-label={props.name}
+    >
       {emoji}
-    </div>
+    </span>
   )
 }
 

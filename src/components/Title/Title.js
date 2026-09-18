@@ -48,6 +48,7 @@ function Title() {
         className={`${styles.menuButton} ${
           menuOpen ? styles.menuButtonOpen : ''
         }`}
+        type="button"
         aria-label={
           menuOpen
             ? 'Close navigation menu'
@@ -67,7 +68,6 @@ function Title() {
         className={`${styles.nav} ${
           menuOpen ? styles.navOpen : ''
         }`}
-        aria-hidden={!menuOpen}
       >
         <NavLink
           className={({ isActive }) =>

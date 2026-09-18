@@ -8,8 +8,14 @@ function POPOSList() {
 
   const spaces = data
     .filter((obj) => {
-      const inTitle = obj.title.toLowerCase().includes(query.toLowerCase())
-      const inAddress = obj.address.toLowerCase().includes(query.toLowerCase())
+      const inTitle = obj.title
+        .toLowerCase()
+        .includes(query.toLowerCase())
+
+      const inAddress = obj.address
+        .toLowerCase()
+        .includes(query.toLowerCase())
+
       return inTitle || inAddress
     })
     .map((obj) => {
@@ -26,21 +32,39 @@ function POPOSList() {
         />
       )
     })
-    
 
-return (
-    <div className={styles.POPOSList}>
-      <form onSubmit={(e) => e.preventDefault()}>
+  return (
+    <main className={styles.POPOSList}>
+      <h1>San Francisco POPOS</h1>
+
+      <form
+        className={styles.search}
+        onSubmit={(e) => e.preventDefault()}
+      >
+        <label htmlFor="popos-search">
+          Search POPOS spaces
+        </label>
+
         <input
+          id="popos-search"
+          type="search"
           value={query}
           placeholder="Search by title or address"
           onChange={(e) => setQuery(e.target.value)}
         />
-        <button type="submit">Submit</button>
+
+        <button type="submit">
+          Search
+        </button>
       </form>
 
-      {spaces}
-    </div>
+      <section
+        className={styles.spacesGrid}
+        aria-label="POPOS spaces"
+      >
+        {spaces}
+      </section>
+    </main>
   )
 }
 

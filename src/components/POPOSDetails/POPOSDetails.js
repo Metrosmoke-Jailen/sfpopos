@@ -5,7 +5,15 @@ import POPOSFeatureList from '../POPOSFeatureList/POPOSFeatureList'
 
 function POPOSDetails() {
   const { id } = useParams()
-  const { images, title, desc, hours, features, geo, address } = data[id]
+  const {
+    images,
+    title,
+    desc,
+    hours,
+    features,
+    geo,
+    address,
+  } = data[id]
 
   return (
     <main className={styles.POPOSDetails}>
@@ -14,17 +22,23 @@ function POPOSDetails() {
       </Link>
 
       <div className={styles.content}>
-        <div className={styles.imageContainer}>
+        <figure className={styles.imageContainer}>
           <img
             className={styles.image}
             src={`${process.env.PUBLIC_URL}/images/${images[0]}`}
-            alt={title}
+            alt={`${title}, a privately owned public open space in San Francisco`}
           />
-        </div>
+
+          <figcaption className={styles.imageCaption}>
+            {title}
+          </figcaption>
+        </figure>
 
         <div className={styles.info}>
           <div className={styles.heading}>
-            <p className={styles.eyebrow}>San Francisco POPOS</p>
+            <p className={styles.eyebrow}>
+              San Francisco POPOS
+            </p>
 
             <h1 className={styles.title}>
               {title}
@@ -61,7 +75,10 @@ function POPOSDetails() {
             <POPOSFeatureList features={features} />
           </section>
 
-          <section className={styles.coordinates}>
+          <section
+            className={styles.coordinates}
+            aria-label="Geographic coordinates"
+          >
             <div>
               <span>Latitude</span>
               <strong>{geo.lat}</strong>
